@@ -3,10 +3,11 @@ let app = express();
 let port = 3000;
 
 app.set("view engine","ejs");
+app.use(express.static("./public"));
 
 app.get('/', (req, res)=>{
    
-    console.log(`Server is started on ${port} and reqest params is ${name.a}`);
+    console.log(`Server is started on ${port}`);
 })
 
 app.get('/home',(req, res)=>{
